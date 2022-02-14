@@ -536,6 +536,7 @@
         <div class="widthWrapper">
             <button id="Edit"></button>
             <h1>Гипнокинк-анкета (v. 1.0.2.R.0)</h1>
+            <br>
             <div class="legend">
                 <div><span data-color="#FFFFFF" class="choice notEntered"></span> <span class="legend-text">Не Указано</span></div>
                 <div><span data-color="#FE6BB4" class="choice favorite"></span> <span class="legend-text">Любимое / Всегда</span></div>
@@ -1017,6 +1018,9 @@
                         kinkRow: function(context, drawCall){
                             context.fillStyle = '#000000';
                             context.font = "12px Arial";
+                            
+                            //Перенос строк (line breaks) надо делать в блоке под этим комментом!
+                            //Мб это поможет: https://stackoverflow.com/questions/5026961/html5-canvas-ctx-filltext-wont-do-line-breaks
                             
                             var x = drawCall.x + 5 + (drawCall.data.choices.length * 20);
                             var y = drawCall.y - 6;
